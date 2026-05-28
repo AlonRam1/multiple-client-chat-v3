@@ -1,0 +1,3 @@
+/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles/proto_gen.dir
+/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles/edit_cache.dir
+/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles/rebuild_cache.dir
