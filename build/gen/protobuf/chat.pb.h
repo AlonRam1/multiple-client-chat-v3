@@ -53,18 +53,18 @@ struct TableStruct_chat_2eproto {
 extern "C" {
 extern const ::google::protobuf::internal::DescriptorTable descriptor_table_chat_2eproto;
 }  // extern "C"
-namespace ChatPackage {
+namespace Chat {
 class UserMessage;
 struct UserMessageDefaultTypeInternal;
 extern UserMessageDefaultTypeInternal _UserMessage_default_instance_;
 extern const ::google::protobuf::internal::ClassDataFull UserMessage_class_data_;
-}  // namespace ChatPackage
+}  // namespace Chat
 namespace google {
 namespace protobuf {
 }  // namespace protobuf
 }  // namespace google
 
-namespace ChatPackage {
+namespace Chat {
 
 // ===================================================================
 
@@ -72,7 +72,7 @@ namespace ChatPackage {
 // -------------------------------------------------------------------
 
 class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserMessage final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:ChatPackage.UserMessage) */ {
+/* @@protoc_insertion_point(class_definition:Chat.UserMessage) */ {
  public:
   inline UserMessage() : UserMessage(nullptr) {}
   ~UserMessage() PROTOBUF_FINAL;
@@ -194,7 +194,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserMessage final : public ::google
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "ChatPackage.UserMessage"; }
+  static ::absl::string_view FullMessageName() { return "Chat.UserMessage"; }
 
   explicit UserMessage(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
   UserMessage(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const UserMessage& from);
@@ -250,12 +250,12 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserMessage final : public ::google
   ::std::string* PROTOBUF_NONNULL _internal_mutable_text();
 
   public:
-  // @@protoc_insertion_point(class_scope:ChatPackage.UserMessage)
+  // @@protoc_insertion_point(class_scope:Chat.UserMessage)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<1, 2,
-                                   0, 40,
+                                   0, 33,
                                    2>
       _table_;
 
@@ -313,7 +313,7 @@ inline void UserMessage::clear_user() {
 }
 inline const ::std::string& UserMessage::user() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:ChatPackage.UserMessage.user)
+  // @@protoc_insertion_point(field_get:Chat.UserMessage.user)
   return _internal_user();
 }
 template <typename Arg_, typename... Args_>
@@ -321,13 +321,13 @@ PROTOBUF_ALWAYS_INLINE void UserMessage::set_user(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   SetHasBit(_impl_._has_bits_[0], 0x00000001U);
   _impl_.user_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:ChatPackage.UserMessage.user)
+  // @@protoc_insertion_point(field_set:Chat.UserMessage.user)
 }
 inline ::std::string* PROTOBUF_NONNULL UserMessage::mutable_user()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   SetHasBit(_impl_._has_bits_[0], 0x00000001U);
   ::std::string* _s = _internal_mutable_user();
-  // @@protoc_insertion_point(field_mutable:ChatPackage.UserMessage.user)
+  // @@protoc_insertion_point(field_mutable:Chat.UserMessage.user)
   return _s;
 }
 inline const ::std::string& UserMessage::_internal_user() const {
@@ -344,7 +344,7 @@ inline ::std::string* PROTOBUF_NONNULL UserMessage::_internal_mutable_user() {
 }
 inline ::std::string* PROTOBUF_NULLABLE UserMessage::release_user() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:ChatPackage.UserMessage.user)
+  // @@protoc_insertion_point(field_release:Chat.UserMessage.user)
   if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
     return nullptr;
   }
@@ -366,7 +366,7 @@ inline void UserMessage::set_allocated_user(::std::string* PROTOBUF_NULLABLE val
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_.IsDefault()) {
     _impl_.user_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:ChatPackage.UserMessage.user)
+  // @@protoc_insertion_point(field_set_allocated:Chat.UserMessage.user)
 }
 
 // string text = 2;
@@ -378,7 +378,7 @@ inline void UserMessage::clear_text() {
 }
 inline const ::std::string& UserMessage::text() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:ChatPackage.UserMessage.text)
+  // @@protoc_insertion_point(field_get:Chat.UserMessage.text)
   return _internal_text();
 }
 template <typename Arg_, typename... Args_>
@@ -386,13 +386,13 @@ PROTOBUF_ALWAYS_INLINE void UserMessage::set_text(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   SetHasBit(_impl_._has_bits_[0], 0x00000002U);
   _impl_.text_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:ChatPackage.UserMessage.text)
+  // @@protoc_insertion_point(field_set:Chat.UserMessage.text)
 }
 inline ::std::string* PROTOBUF_NONNULL UserMessage::mutable_text()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   SetHasBit(_impl_._has_bits_[0], 0x00000002U);
   ::std::string* _s = _internal_mutable_text();
-  // @@protoc_insertion_point(field_mutable:ChatPackage.UserMessage.text)
+  // @@protoc_insertion_point(field_mutable:Chat.UserMessage.text)
   return _s;
 }
 inline const ::std::string& UserMessage::_internal_text() const {
@@ -409,7 +409,7 @@ inline ::std::string* PROTOBUF_NONNULL UserMessage::_internal_mutable_text() {
 }
 inline ::std::string* PROTOBUF_NULLABLE UserMessage::release_text() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:ChatPackage.UserMessage.text)
+  // @@protoc_insertion_point(field_release:Chat.UserMessage.text)
   if (!CheckHasBit(_impl_._has_bits_[0], 0x00000002U)) {
     return nullptr;
   }
@@ -431,7 +431,7 @@ inline void UserMessage::set_allocated_text(::std::string* PROTOBUF_NULLABLE val
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.text_.IsDefault()) {
     _impl_.text_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:ChatPackage.UserMessage.text)
+  // @@protoc_insertion_point(field_set_allocated:Chat.UserMessage.text)
 }
 
 #ifdef __GNUC__
@@ -439,7 +439,7 @@ inline void UserMessage::set_allocated_text(::std::string* PROTOBUF_NULLABLE val
 #endif  // __GNUC__
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace ChatPackage
+}  // namespace Chat
 
 
 // @@protoc_insertion_point(global_scope)

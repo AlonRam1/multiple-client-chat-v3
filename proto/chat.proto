@@ -1,5 +1,5 @@
 syntax = "proto3";
-package ChatPackage;
+package Chat;
 
 message UserMessage {
   string user = 1;

@@ -64,19 +64,64 @@ CMAKE_BINARY_DIR = "/home/alon/Desktop/personal projects/multiple-client-chat-v3
 
 # The main recursive "all" target.
 all: CMakeFiles/proto_gen.dir/all
+all: server/all
+all: client/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/proto_gen.dir/codegen
+codegen: server/codegen
+codegen: client/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: server/preinstall
+preinstall: client/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/proto_gen.dir/clean
+clean: server/clean
+clean: client/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory client
+
+# Recursive "all" directory target.
+client/all: client/CMakeFiles/client.dir/all
+.PHONY : client/all
+
+# Recursive "codegen" directory target.
+client/codegen: client/CMakeFiles/client.dir/codegen
+.PHONY : client/codegen
+
+# Recursive "preinstall" directory target.
+client/preinstall:
+.PHONY : client/preinstall
+
+# Recursive "clean" directory target.
+client/clean: client/CMakeFiles/client.dir/clean
+.PHONY : client/clean
+
+#=============================================================================
+# Directory level rules for directory server
+
+# Recursive "all" directory target.
+server/all: server/CMakeFiles/server.dir/all
+.PHONY : server/all
+
+# Recursive "codegen" directory target.
+server/codegen: server/CMakeFiles/server.dir/codegen
+.PHONY : server/codegen
+
+# Recursive "preinstall" directory target.
+server/preinstall:
+.PHONY : server/preinstall
+
+# Recursive "clean" directory target.
+server/clean: server/CMakeFiles/server.dir/clean
+.PHONY : server/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/proto_gen.dir
@@ -85,7 +130,7 @@ clean: CMakeFiles/proto_gen.dir/clean
 CMakeFiles/proto_gen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/proto_gen.dir/build.make CMakeFiles/proto_gen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/proto_gen.dir/build.make CMakeFiles/proto_gen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=1,2,3,4 "Built target proto_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=3,4,5,6 "Built target proto_gen"
 .PHONY : CMakeFiles/proto_gen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -102,13 +147,77 @@ proto_gen: CMakeFiles/proto_gen.dir/rule
 # codegen rule for target.
 CMakeFiles/proto_gen.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/proto_gen.dir/build.make CMakeFiles/proto_gen.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=1,2,3,4 "Finished codegen for target proto_gen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=3,4,5,6 "Finished codegen for target proto_gen"
 .PHONY : CMakeFiles/proto_gen.dir/codegen
 
 # clean rule for target.
 CMakeFiles/proto_gen.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/proto_gen.dir/build.make CMakeFiles/proto_gen.dir/clean
 .PHONY : CMakeFiles/proto_gen.dir/clean
+
+#=============================================================================
+# Target rules for target server/CMakeFiles/server.dir
+
+# All Build rule for target.
+server/CMakeFiles/server.dir/all: CMakeFiles/proto_gen.dir/all
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/depend
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=7,8 "Built target server"
+.PHONY : server/CMakeFiles/server.dir/all
+
+# Build rule for subdir invocation for target.
+server/CMakeFiles/server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" 0
+.PHONY : server/CMakeFiles/server.dir/rule
+
+# Convenience name for target.
+server: server/CMakeFiles/server.dir/rule
+.PHONY : server
+
+# codegen rule for target.
+server/CMakeFiles/server.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=7,8 "Finished codegen for target server"
+.PHONY : server/CMakeFiles/server.dir/codegen
+
+# clean rule for target.
+server/CMakeFiles/server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/clean
+.PHONY : server/CMakeFiles/server.dir/clean
+
+#=============================================================================
+# Target rules for target client/CMakeFiles/client.dir
+
+# All Build rule for target.
+client/CMakeFiles/client.dir/all: CMakeFiles/proto_gen.dir/all
+	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/depend
+	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=1,2 "Built target client"
+.PHONY : client/CMakeFiles/client.dir/all
+
+# Build rule for subdir invocation for target.
+client/CMakeFiles/client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/CMakeFiles/client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" 0
+.PHONY : client/CMakeFiles/client.dir/rule
+
+# Convenience name for target.
+client: client/CMakeFiles/client.dir/rule
+.PHONY : client
+
+# codegen rule for target.
+client/CMakeFiles/client.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=1,2 "Finished codegen for target client"
+.PHONY : client/CMakeFiles/client.dir/codegen
+
+# clean rule for target.
+client/CMakeFiles/client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/clean
+.PHONY : client/CMakeFiles/client.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

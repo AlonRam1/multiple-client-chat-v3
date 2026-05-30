@@ -129,6 +129,32 @@ proto_gen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/proto_gen.dir/build.make CMakeFiles/proto_gen.dir/build
 .PHONY : proto_gen/fast
 
+#=============================================================================
+# Target rules for targets named server
+
+# Build rule for target.
+server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+#=============================================================================
+# Target rules for targets named client
+
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client
+.PHONY : client
+
+# fast build rule for target.
+client/fast:
+	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/build
+.PHONY : client/fast
+
 build/gen/grpc/chat.grpc.pb.o: build/gen/grpc/chat.grpc.pb.cc.o
 .PHONY : build/gen/grpc/chat.grpc.pb.o
 
@@ -185,7 +211,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... client"
 	@echo "... proto_gen"
+	@echo "... server"
 	@echo "... build/gen/grpc/chat.grpc.pb.o"
 	@echo "... build/gen/grpc/chat.grpc.pb.i"
 	@echo "... build/gen/grpc/chat.grpc.pb.s"

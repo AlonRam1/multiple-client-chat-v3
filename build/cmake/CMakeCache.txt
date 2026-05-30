@@ -281,6 +281,15 @@ absl_DIR:PATH=/usr/lib/cmake/absl
 //The directory containing a CMake configuration file for c-ares.
 c-ares_DIR:PATH=/usr/lib/cmake/c-ares
 
+//Value Computed by CMake
+client_BINARY_DIR:STATIC=/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/client
+
+//Value Computed by CMake
+client_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+client_SOURCE_DIR:STATIC=/home/alon/Desktop/personal projects/multiple-client-chat-v3/client
+
 //The directory containing a CMake configuration file for gRPC.
 gRPC_DIR:PATH=/usr/lib/cmake/grpc
 
@@ -307,6 +316,15 @@ protobuf_VERBOSE:BOOL=OFF
 
 //The directory containing a CMake configuration file for re2.
 re2_DIR:PATH=/usr/lib/cmake/re2
+
+//Value Computed by CMake
+server_BINARY_DIR:STATIC=/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/server
+
+//Value Computed by CMake
+server_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+server_SOURCE_DIR:STATIC=/home/alon/Desktop/personal projects/multiple-client-chat-v3/server
 
 //The directory containing a CMake configuration file for utf8_range.
 utf8_range_DIR:PATH=/usr/lib/cmake/utf8_range
@@ -422,7 +440,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

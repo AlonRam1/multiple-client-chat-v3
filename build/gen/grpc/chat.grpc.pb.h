@@ -26,54 +26,54 @@
 #include <grpcpp/support/sync_stream.h>
 #include <grpcpp/ports_def.inc>
 
-namespace ChatPackage {
+namespace Chat {
 
 class ChatService final {
  public:
   static constexpr char const* service_full_name() {
-    return "ChatPackage.ChatService";
+    return "Chat.ChatService";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>> SendUserMessage(::grpc::ClientContext* context) {
-      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>>(SendUserMessageRaw(context));
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::Chat::UserMessage, ::Chat::UserMessage>> SendUserMessage(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::Chat::UserMessage, ::Chat::UserMessage>>(SendUserMessageRaw(context));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>> AsyncSendUserMessage(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>>(AsyncSendUserMessageRaw(context, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::Chat::UserMessage, ::Chat::UserMessage>> AsyncSendUserMessage(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::Chat::UserMessage, ::Chat::UserMessage>>(AsyncSendUserMessageRaw(context, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>> PrepareAsyncSendUserMessage(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>>(PrepareAsyncSendUserMessageRaw(context, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::Chat::UserMessage, ::Chat::UserMessage>> PrepareAsyncSendUserMessage(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::Chat::UserMessage, ::Chat::UserMessage>>(PrepareAsyncSendUserMessageRaw(context, cq));
     }
     class async_interface {
      public:
       virtual ~async_interface() {}
-      virtual void SendUserMessage(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::ChatPackage::UserMessage,::ChatPackage::UserMessage>* reactor) = 0;
+      virtual void SendUserMessage(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::Chat::UserMessage,::Chat::UserMessage>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientReaderWriterInterface< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* SendUserMessageRaw(::grpc::ClientContext* context) = 0;
-    virtual ::grpc::ClientAsyncReaderWriterInterface< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* AsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderWriterInterface< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* PrepareAsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::Chat::UserMessage, ::Chat::UserMessage>* SendUserMessageRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::Chat::UserMessage, ::Chat::UserMessage>* AsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::Chat::UserMessage, ::Chat::UserMessage>* PrepareAsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    std::unique_ptr< ::grpc::ClientReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>> SendUserMessage(::grpc::ClientContext* context) {
-      return std::unique_ptr< ::grpc::ClientReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>>(SendUserMessageRaw(context));
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>> SendUserMessage(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>>(SendUserMessageRaw(context));
     }
-    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>> AsyncSendUserMessage(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>>(AsyncSendUserMessageRaw(context, cq, tag));
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>> AsyncSendUserMessage(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>>(AsyncSendUserMessageRaw(context, cq, tag));
     }
-    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>> PrepareAsyncSendUserMessage(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>>(PrepareAsyncSendUserMessageRaw(context, cq));
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>> PrepareAsyncSendUserMessage(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>>(PrepareAsyncSendUserMessageRaw(context, cq));
     }
     class async final :
       public StubInterface::async_interface {
      public:
-      void SendUserMessage(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::ChatPackage::UserMessage,::ChatPackage::UserMessage>* reactor) override;
+      void SendUserMessage(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::Chat::UserMessage,::Chat::UserMessage>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -85,9 +85,9 @@ class ChatService final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* SendUserMessageRaw(::grpc::ClientContext* context) override;
-    ::grpc::ClientAsyncReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* AsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* PrepareAsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* SendUserMessageRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* AsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* PrepareAsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_SendUserMessage_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -96,7 +96,7 @@ class ChatService final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status SendUserMessage(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* stream);
+    virtual ::grpc::Status SendUserMessage(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* stream);
   };
   template <class BaseClass>
   class WithAsyncMethod_SendUserMessage : public BaseClass {
@@ -110,11 +110,11 @@ class ChatService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SendUserMessage(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* /*stream*/)  override {
+    ::grpc::Status SendUserMessage(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* /*stream*/)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSendUserMessage(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSendUserMessage(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncBidiStreaming(0, context, stream, new_call_cq, notification_cq, tag);
     }
   };
@@ -126,7 +126,7 @@ class ChatService final {
    public:
     WithCallbackMethod_SendUserMessage() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackBidiHandler< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>(
+          new ::grpc::internal::CallbackBidiHandler< ::Chat::UserMessage, ::Chat::UserMessage>(
             [this](
                    ::grpc::CallbackServerContext* context) { return this->SendUserMessage(context); }));
     }
@@ -134,11 +134,11 @@ class ChatService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SendUserMessage(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* /*stream*/)  override {
+    ::grpc::Status SendUserMessage(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* /*stream*/)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerBidiReactor< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* SendUserMessage(
+    virtual ::grpc::ServerBidiReactor< ::Chat::UserMessage, ::Chat::UserMessage>* SendUserMessage(
       ::grpc::CallbackServerContext* /*context*/)
       { return nullptr; }
   };
@@ -156,7 +156,7 @@ class ChatService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SendUserMessage(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* /*stream*/)  override {
+    ::grpc::Status SendUserMessage(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* /*stream*/)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -173,7 +173,7 @@ class ChatService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SendUserMessage(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* /*stream*/)  override {
+    ::grpc::Status SendUserMessage(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* /*stream*/)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -196,7 +196,7 @@ class ChatService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SendUserMessage(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* /*stream*/)  override {
+    ::grpc::Status SendUserMessage(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* /*stream*/)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -209,7 +209,7 @@ class ChatService final {
   typedef Service StreamedService;
 };
 
-}  // namespace ChatPackage
+}  // namespace Chat
 
 
 #include <grpcpp/ports_undef.inc>

@@ -25,7 +25,7 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
-namespace ChatPackage {
+namespace Chat {
 
 inline constexpr UserMessage::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
@@ -57,7 +57,7 @@ struct UserMessageDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UserMessageDefaultTypeInternal _UserMessage_default_instance_;
-}  // namespace ChatPackage
+}  // namespace Chat
 static constexpr const ::_pb::EnumDescriptor* PROTOBUF_NONNULL* PROTOBUF_NULLABLE
     file_level_enum_descriptors_chat_2eproto = nullptr;
 static constexpr const ::_pb::ServiceDescriptor* PROTOBUF_NONNULL* PROTOBUF_NULLABLE
@@ -66,34 +66,33 @@ const ::uint32_t
     TableStruct_chat_2eproto::offsets[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
         protodesc_cold) = {
         0x081, // bitmap
-        PROTOBUF_FIELD_OFFSET(::ChatPackage::UserMessage, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::Chat::UserMessage, _impl_._has_bits_),
         5, // hasbit index offset
-        PROTOBUF_FIELD_OFFSET(::ChatPackage::UserMessage, _impl_.user_),
-        PROTOBUF_FIELD_OFFSET(::ChatPackage::UserMessage, _impl_.text_),
+        PROTOBUF_FIELD_OFFSET(::Chat::UserMessage, _impl_.user_),
+        PROTOBUF_FIELD_OFFSET(::Chat::UserMessage, _impl_.text_),
         0,
         1,
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-        {0, sizeof(::ChatPackage::UserMessage)},
+        {0, sizeof(::Chat::UserMessage)},
 };
 static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
-    &::ChatPackage::_UserMessage_default_instance_._instance,
+    &::Chat::_UserMessage_default_instance_._instance,
 };
 const char descriptor_table_protodef_chat_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\nchat.proto\022\013ChatPackage\")\n\013UserMessage"
-    "\022\014\n\004user\030\001 \001(\t\022\014\n\004text\030\002 \001(\t2X\n\013ChatServ"
-    "ice\022I\n\017SendUserMessage\022\030.ChatPackage.Use"
-    "rMessage\032\030.ChatPackage.UserMessage(\0010\001b\006"
-    "proto3"
+    "\n\nchat.proto\022\004Chat\")\n\013UserMessage\022\014\n\004use"
+    "r\030\001 \001(\t\022\014\n\004text\030\002 \001(\t2J\n\013ChatService\022;\n\017"
+    "SendUserMessage\022\021.Chat.UserMessage\032\021.Cha"
+    "t.UserMessage(\0010\001b\006proto3"
 };
 static ::absl::once_flag descriptor_table_chat_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_chat_2eproto = {
     false,
     false,
-    166,
+    145,
     descriptor_table_protodef_chat_2eproto,
     "chat.proto",
     &descriptor_table_chat_2eproto_once,
@@ -106,7 +105,7 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_chat_2eproto =
     file_level_enum_descriptors_chat_2eproto,
     file_level_service_descriptors_chat_2eproto,
 };
-namespace ChatPackage {
+namespace Chat {
 // ===================================================================
 
 class UserMessage::_Internal {
@@ -124,12 +123,12 @@ UserMessage::UserMessage(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ChatPackage.UserMessage)
+  // @@protoc_insertion_point(arena_constructor:Chat.UserMessage)
 }
 PROTOBUF_NDEBUG_INLINE UserMessage::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
     [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-    [[maybe_unused]] const ::ChatPackage::UserMessage& from_msg)
+    [[maybe_unused]] const ::Chat::UserMessage& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         user_(arena, from.user_),
@@ -149,7 +148,7 @@ UserMessage::UserMessage(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:ChatPackage.UserMessage)
+  // @@protoc_insertion_point(copy_constructor:Chat.UserMessage)
 }
 PROTOBUF_NDEBUG_INLINE UserMessage::Impl_::Impl_(
     [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
@@ -162,7 +161,7 @@ inline void UserMessage::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
 UserMessage::~UserMessage() {
-  // @@protoc_insertion_point(destructor:ChatPackage.UserMessage)
+  // @@protoc_insertion_point(destructor:Chat.UserMessage)
   SharedDtor(*this);
 }
 inline void UserMessage::SharedDtor(MessageLite& self) {
@@ -219,7 +218,7 @@ UserMessage::GetClassData() const {
   return UserMessage_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 40, 2>
+const ::_pbi::TcParseTable<1, 2, 0, 33, 2>
 UserMessage::_table_ = {
   {
     PROTOBUF_FIELD_OFFSET(UserMessage, _impl_._has_bits_),
@@ -235,7 +234,7 @@ UserMessage::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::ChatPackage::UserMessage>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::Chat::UserMessage>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string text = 2;
@@ -256,14 +255,14 @@ UserMessage::_table_ = {
   }},
   // no aux_entries
   {{
-    "\27\4\4\0\0\0\0\0"
-    "ChatPackage.UserMessage"
+    "\20\4\4\0\0\0\0\0"
+    "Chat.UserMessage"
     "user"
     "text"
   }},
 };
 PROTOBUF_NOINLINE void UserMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:ChatPackage.UserMessage)
+// @@protoc_insertion_point(message_clear_start:Chat.UserMessage)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -296,7 +295,7 @@ PROTOBUF_NOINLINE void UserMessage::Clear() {
   if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
     this_.CheckHasBitConsistency();
   }
-  // @@protoc_insertion_point(serialize_to_array_start:ChatPackage.UserMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:Chat.UserMessage)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -306,7 +305,7 @@ PROTOBUF_NOINLINE void UserMessage::Clear() {
     if (!this_._internal_user().empty()) {
       const ::std::string& _s = this_._internal_user();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ChatPackage.UserMessage.user");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "Chat.UserMessage.user");
       target = stream->WriteStringMaybeAliased(1, _s, target);
     }
   }
@@ -316,7 +315,7 @@ PROTOBUF_NOINLINE void UserMessage::Clear() {
     if (!this_._internal_text().empty()) {
       const ::std::string& _s = this_._internal_text();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ChatPackage.UserMessage.text");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "Chat.UserMessage.text");
       target = stream->WriteStringMaybeAliased(2, _s, target);
     }
   }
@@ -326,7 +325,7 @@ PROTOBUF_NOINLINE void UserMessage::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ChatPackage.UserMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:Chat.UserMessage)
   return target;
 }
 
@@ -337,7 +336,7 @@ PROTOBUF_NOINLINE void UserMessage::Clear() {
 ::size_t UserMessage::ByteSizeLong() const {
   const UserMessage& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:ChatPackage.UserMessage)
+  // @@protoc_insertion_point(message_byte_size_start:Chat.UserMessage)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -374,7 +373,7 @@ void UserMessage::MergeImpl(::google::protobuf::MessageLite& to_msg,
   if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
     from.CheckHasBitConsistency();
   }
-  // @@protoc_insertion_point(class_specific_merge_from_start:ChatPackage.UserMessage)
+  // @@protoc_insertion_point(class_specific_merge_from_start:Chat.UserMessage)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
@@ -406,7 +405,7 @@ void UserMessage::MergeImpl(::google::protobuf::MessageLite& to_msg,
 }
 
 void UserMessage::CopyFrom(const UserMessage& from) {
-  // @@protoc_insertion_point(class_specific_copy_from_start:ChatPackage.UserMessage)
+  // @@protoc_insertion_point(class_specific_copy_from_start:Chat.UserMessage)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -427,7 +426,7 @@ void UserMessage::InternalSwap(UserMessage* PROTOBUF_RESTRICT PROTOBUF_NONNULL o
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace ChatPackage
+}  // namespace Chat
 namespace google {
 namespace protobuf {
 }  // namespace protobuf

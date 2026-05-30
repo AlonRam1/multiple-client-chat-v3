@@ -11,6 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.3.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.3.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.3.2/CMakeSystem.cmake"
+  "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client/CMakeLists.txt"
+  "/home/alon/Desktop/personal projects/multiple-client-chat-v3/server/CMakeLists.txt"
   "/usr/lib/cmake/absl/abslConfig.cmake"
   "/usr/lib/cmake/absl/abslConfigVersion.cmake"
   "/usr/lib/cmake/absl/abslTargets-relwithdebinfo.cmake"
@@ -91,9 +93,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "server/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "client/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/proto_gen.dir/DependInfo.cmake"
+  "server/CMakeFiles/server.dir/DependInfo.cmake"
+  "client/CMakeFiles/client.dir/DependInfo.cmake"
   )

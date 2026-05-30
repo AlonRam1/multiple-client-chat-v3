@@ -20,10 +20,10 @@
 #include <grpcpp/impl/service_type.h>
 #include <grpcpp/support/sync_stream.h>
 #include <grpcpp/ports_def.inc>
-namespace ChatPackage {
+namespace Chat {
 
 static const char* ChatService_method_names[] = {
-  "/ChatPackage.ChatService/SendUserMessage",
+  "/Chat.ChatService/SendUserMessage",
 };
 
 std::unique_ptr< ChatService::Stub> ChatService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -36,31 +36,31 @@ ChatService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channe
   : channel_(channel), rpcmethod_SendUserMessage_(ChatService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::BIDI_STREAMING, channel)
   {}
 
-::grpc::ClientReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* ChatService::Stub::SendUserMessageRaw(::grpc::ClientContext* context) {
-  return ::grpc::internal::ClientReaderWriterFactory< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>::Create(channel_.get(), rpcmethod_SendUserMessage_, context);
+::grpc::ClientReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* ChatService::Stub::SendUserMessageRaw(::grpc::ClientContext* context) {
+  return ::grpc::internal::ClientReaderWriterFactory< ::Chat::UserMessage, ::Chat::UserMessage>::Create(channel_.get(), rpcmethod_SendUserMessage_, context);
 }
 
-void ChatService::Stub::async::SendUserMessage(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::ChatPackage::UserMessage,::ChatPackage::UserMessage>* reactor) {
-  ::grpc::internal::ClientCallbackReaderWriterFactory< ::ChatPackage::UserMessage,::ChatPackage::UserMessage>::Create(stub_->channel_.get(), stub_->rpcmethod_SendUserMessage_, context, reactor);
+void ChatService::Stub::async::SendUserMessage(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::Chat::UserMessage,::Chat::UserMessage>* reactor) {
+  ::grpc::internal::ClientCallbackReaderWriterFactory< ::Chat::UserMessage,::Chat::UserMessage>::Create(stub_->channel_.get(), stub_->rpcmethod_SendUserMessage_, context, reactor);
 }
 
-::grpc::ClientAsyncReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* ChatService::Stub::AsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
-  return ::grpc::internal::ClientAsyncReaderWriterFactory< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>::Create(channel_.get(), cq, rpcmethod_SendUserMessage_, context, true, tag);
+::grpc::ClientAsyncReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* ChatService::Stub::AsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderWriterFactory< ::Chat::UserMessage, ::Chat::UserMessage>::Create(channel_.get(), cq, rpcmethod_SendUserMessage_, context, true, tag);
 }
 
-::grpc::ClientAsyncReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* ChatService::Stub::PrepareAsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncReaderWriterFactory< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>::Create(channel_.get(), cq, rpcmethod_SendUserMessage_, context, false, nullptr);
+::grpc::ClientAsyncReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* ChatService::Stub::PrepareAsyncSendUserMessageRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderWriterFactory< ::Chat::UserMessage, ::Chat::UserMessage>::Create(channel_.get(), cq, rpcmethod_SendUserMessage_, context, false, nullptr);
 }
 
 ChatService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       ChatService_method_names[0],
       ::grpc::internal::RpcMethod::BIDI_STREAMING,
-      new ::grpc::internal::BidiStreamingHandler< ChatService::Service, ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>(
+      new ::grpc::internal::BidiStreamingHandler< ChatService::Service, ::Chat::UserMessage, ::Chat::UserMessage>(
           [](ChatService::Service* service,
              ::grpc::ServerContext* ctx,
-             ::grpc::ServerReaderWriter<::ChatPackage::UserMessage,
-             ::ChatPackage::UserMessage>* stream) {
+             ::grpc::ServerReaderWriter<::Chat::UserMessage,
+             ::Chat::UserMessage>* stream) {
                return service->SendUserMessage(ctx, stream);
              }, this)));
 }
@@ -68,13 +68,13 @@ ChatService::Service::Service() {
 ChatService::Service::~Service() {
 }
 
-::grpc::Status ChatService::Service::SendUserMessage(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::ChatPackage::UserMessage, ::ChatPackage::UserMessage>* stream) {
+::grpc::Status ChatService::Service::SendUserMessage(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* stream) {
   (void) context;
   (void) stream;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
 
-}  // namespace ChatPackage
+}  // namespace Chat
 #include <grpcpp/ports_undef.inc>
 
