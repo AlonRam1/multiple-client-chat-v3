@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/gen/protobuf" -I"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/gen/grpc"
+CXX_INCLUDES = -I"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/gen/grpc" -I"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/gen/protobuf"
 
 CXX_FLAGS = 
 

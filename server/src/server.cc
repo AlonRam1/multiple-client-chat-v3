@@ -6,7 +6,7 @@
 #include <algorithm>
 
 #include <grpcpp/grpcpp.h>
-#include  "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/gen/grpc/chat.grpc.pb.h"
+#include  "chat.grpc.pb.h"
 
 using std::string;
 

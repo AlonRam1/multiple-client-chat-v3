@@ -24,7 +24,7 @@ VERBATIM
 )
 add_library(proto_gen ${GENERATED_CC_FILES})
 
-target_include_directories(proto_gen PUBLIC ${PROTOBUF_GENERATE_DIR} ${GRPC_GENERATE_DIR})
+target_include_directories(proto_gen PUBLIC ${GRPC_GENERATE_DIR} ${PROTOBUF_GENERATE_DIR})
 
 add_subdirectory(server)
 add_subdirectory(client)
