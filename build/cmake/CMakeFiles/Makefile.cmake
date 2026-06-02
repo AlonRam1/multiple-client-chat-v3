@@ -11,6 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.3.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.3.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.3.2/CMakeSystem.cmake"
+  "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client-manager/CMakeLists.txt"
+  "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client-session/CMakeLists.txt"
   "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client/CMakeLists.txt"
   "/home/alon/Desktop/personal projects/multiple-client-chat-v3/server/CMakeLists.txt"
   "/usr/lib/cmake/absl/abslConfig.cmake"
@@ -95,6 +97,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "server/CMakeFiles/CMakeDirectoryInformation.cmake"
   "client/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "client-manager/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "client-session/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -102,4 +106,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/proto_gen.dir/DependInfo.cmake"
   "server/CMakeFiles/server.dir/DependInfo.cmake"
   "client/CMakeFiles/client.dir/DependInfo.cmake"
+  "client-manager/CMakeFiles/client_manager_lib.dir/DependInfo.cmake"
+  "client-session/CMakeFiles/client_session_lib.dir/DependInfo.cmake"
   )

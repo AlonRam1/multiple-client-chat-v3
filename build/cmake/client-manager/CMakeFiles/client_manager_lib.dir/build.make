@@ -72,28 +72,28 @@ include client-manager/CMakeFiles/client_manager_lib.dir/flags.make
 client-manager/CMakeFiles/client_manager_lib.dir/codegen:
 .PHONY : client-manager/CMakeFiles/client_manager_lib.dir/codegen
 
-client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o: client-manager/CMakeFiles/client_manager_lib.dir/flags.make
-client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o: /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/client/src/client.cc
-client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o: client-manager/CMakeFiles/client_manager_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o"
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/client-manager" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o -MF CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o.d -o CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o -c "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client/src/client.cc"
+client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o: client-manager/CMakeFiles/client_manager_lib.dir/flags.make
+client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o: /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/client-manager/src/client-manager.cc
+client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o: client-manager/CMakeFiles/client_manager_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o"
+	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/client-manager" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o -MF CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o.d -o CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o -c "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client-manager/src/client-manager.cc"
 
-client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.i"
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/client-manager" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client/src/client.cc" > CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.i
+client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client_manager_lib.dir/src/client-manager.cc.i"
+	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/client-manager" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client-manager/src/client-manager.cc" > CMakeFiles/client_manager_lib.dir/src/client-manager.cc.i
 
-client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.s"
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/client-manager" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client/src/client.cc" -o CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.s
+client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client_manager_lib.dir/src/client-manager.cc.s"
+	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/client-manager" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client-manager/src/client-manager.cc" -o CMakeFiles/client_manager_lib.dir/src/client-manager.cc.s
 
 # Object files for target client_manager_lib
 client_manager_lib_OBJECTS = \
-"CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o"
+"CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o"
 
 # External object files for target client_manager_lib
 client_manager_lib_EXTERNAL_OBJECTS =
 
-client-manager/libclient_manager_lib.a: client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o
+client-manager/libclient_manager_lib.a: client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o
 client-manager/libclient_manager_lib.a: client-manager/CMakeFiles/client_manager_lib.dir/build.make
 client-manager/libclient_manager_lib.a: client-manager/CMakeFiles/client_manager_lib.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libclient_manager_lib.a"

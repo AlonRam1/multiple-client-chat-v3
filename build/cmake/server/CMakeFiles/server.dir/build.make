@@ -96,8 +96,11 @@ server_EXTERNAL_OBJECTS =
 /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: server/CMakeFiles/server.dir/src/server.cc.o
 /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: server/CMakeFiles/server.dir/build.make
 /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: server/CMakeFiles/server.dir/compiler_depend.ts
+/home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: client-manager/libclient_manager_lib.a
 /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: libproto_gen.a
 /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: /usr/lib/libgrpc++.so.1.80.0
+/home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: client-session/libclient_session_lib.a
+/home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: libproto_gen.a
 /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: /usr/lib/libgrpc.so.53.0.0
 /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: /usr/lib/libupb_json_lib.so.53.0.0
 /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/bin/server/server: /usr/lib/libupb_textformat_lib.so.53.0.0

@@ -9,7 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/alon/Desktop/personal projects/multiple-client-chat-v3/client-manager/src/client-manager.cc" "client-manager/CMakeFiles/client-manager.dir/src/client-manager.cc.o" "gcc" "client-manager/CMakeFiles/client-manager.dir/src/client-manager.cc.o.d"
-  "" "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/bin/client-manager/client-manager" "gcc" "client-manager/CMakeFiles/client-manager.dir/link.d"
+  "" "client-manager/client-manager" "gcc" "client-manager/CMakeFiles/client-manager.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -3,8 +3,11 @@
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   CMakeFiles/server.dir/src/server.cc.o \
+  ../client-manager/libclient_manager_lib.a \
   ../libproto_gen.a \
   /usr/lib/libgrpc++.so.1.80.0 \
+  ../client-session/libclient_session_lib.a \
+  ../libproto_gen.a \
   /usr/lib/libgrpc.so.53.0.0 \
   /usr/lib/libupb_json_lib.so.53.0.0 \
   /usr/lib/libupb_textformat_lib.so.53.0.0 \
@@ -149,9 +152,15 @@
 
 CMakeFiles/server.dir/src/server.cc.o:
 
+../client-manager/libclient_manager_lib.a:
+
 ../libproto_gen.a:
 
 /usr/lib/libgrpc++.so.1.80.0:
+
+../client-session/libclient_session_lib.a:
+
+../libproto_gen.a:
 
 /usr/lib/libgrpc.so.53.0.0:
 

@@ -130,50 +130,12 @@ client_manager_lib/fast:
 	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client_manager_lib.dir/build.make client-manager/CMakeFiles/client_manager_lib.dir/build
 .PHONY : client_manager_lib/fast
 
-# Convenience name for target.
-client-manager/CMakeFiles/client-manager.dir/rule:
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client-manager/CMakeFiles/client-manager.dir/rule
-.PHONY : client-manager/CMakeFiles/client-manager.dir/rule
-
-# Convenience name for target.
-client-manager: client-manager/CMakeFiles/client-manager.dir/rule
-.PHONY : client-manager
-
-# fast build rule for target.
-client-manager/fast:
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client-manager.dir/build.make client-manager/CMakeFiles/client-manager.dir/build
-.PHONY : client-manager/fast
-
-__/client/src/client.o: __/client/src/client.cc.o
-.PHONY : __/client/src/client.o
-
-# target to build an object file
-__/client/src/client.cc.o:
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client_manager_lib.dir/build.make client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o
-.PHONY : __/client/src/client.cc.o
-
-__/client/src/client.i: __/client/src/client.cc.i
-.PHONY : __/client/src/client.i
-
-# target to preprocess a source file
-__/client/src/client.cc.i:
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client_manager_lib.dir/build.make client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.i
-.PHONY : __/client/src/client.cc.i
-
-__/client/src/client.s: __/client/src/client.cc.s
-.PHONY : __/client/src/client.s
-
-# target to generate assembly for a file
-__/client/src/client.cc.s:
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client_manager_lib.dir/build.make client-manager/CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.s
-.PHONY : __/client/src/client.cc.s
-
 src/client-manager.o: src/client-manager.cc.o
 .PHONY : src/client-manager.o
 
 # target to build an object file
 src/client-manager.cc.o:
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client-manager.dir/build.make client-manager/CMakeFiles/client-manager.dir/src/client-manager.cc.o
+	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client_manager_lib.dir/build.make client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o
 .PHONY : src/client-manager.cc.o
 
 src/client-manager.i: src/client-manager.cc.i
@@ -181,7 +143,7 @@ src/client-manager.i: src/client-manager.cc.i
 
 # target to preprocess a source file
 src/client-manager.cc.i:
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client-manager.dir/build.make client-manager/CMakeFiles/client-manager.dir/src/client-manager.cc.i
+	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client_manager_lib.dir/build.make client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.i
 .PHONY : src/client-manager.cc.i
 
 src/client-manager.s: src/client-manager.cc.s
@@ -189,7 +151,7 @@ src/client-manager.s: src/client-manager.cc.s
 
 # target to generate assembly for a file
 src/client-manager.cc.s:
-	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client-manager.dir/build.make client-manager/CMakeFiles/client-manager.dir/src/client-manager.cc.s
+	cd "/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake" && $(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client_manager_lib.dir/build.make client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.s
 .PHONY : src/client-manager.cc.s
 
 # Help Target
@@ -200,11 +162,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... client-manager"
 	@echo "... client_manager_lib"
-	@echo "... __/client/src/client.o"
-	@echo "... __/client/src/client.i"
-	@echo "... __/client/src/client.s"
 	@echo "... src/client-manager.o"
 	@echo "... src/client-manager.i"
 	@echo "... src/client-manager.s"

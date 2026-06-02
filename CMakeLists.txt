@@ -28,7 +28,8 @@ target_include_directories(proto_gen PUBLIC ${GRPC_GENERATE_DIR} ${PROTOBUF_GENE
 
 add_subdirectory(server)
 add_subdirectory(client)
-
+add_subdirectory(client-manager)
+add_subdirectory(client-session)
 
 
 

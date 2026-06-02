@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o"
-  "CMakeFiles/client_manager_lib.dir/__/client/src/client.cc.o.d"
+  "CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o"
+  "CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o.d"
   "libclient_manager_lib.a"
   "libclient_manager_lib.pdb"
 )

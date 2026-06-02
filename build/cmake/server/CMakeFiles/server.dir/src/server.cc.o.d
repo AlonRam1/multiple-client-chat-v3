@@ -567,4 +567,7 @@ server/CMakeFiles/server.dir/src/server.cc.o: \
  /usr/include/grpcpp/support/proto_buffer_reader.h \
  /usr/include/grpcpp/support/proto_buffer_writer.h \
  /usr/include/grpcpp/support/stub_options.h \
- /usr/include/grpcpp/ports_def.inc /usr/include/grpcpp/ports_undef.inc
+ /usr/include/grpcpp/ports_def.inc /usr/include/grpcpp/ports_undef.inc \
+ /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/include/client-manager.h \
+ /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/include/client-session.h \
+ /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/include/server.h

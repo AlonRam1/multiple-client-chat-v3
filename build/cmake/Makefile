@@ -155,6 +155,32 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/build
 .PHONY : client/fast
 
+#=============================================================================
+# Target rules for targets named client_manager_lib
+
+# Build rule for target.
+client_manager_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client_manager_lib
+.PHONY : client_manager_lib
+
+# fast build rule for target.
+client_manager_lib/fast:
+	$(MAKE) $(MAKESILENT) -f client-manager/CMakeFiles/client_manager_lib.dir/build.make client-manager/CMakeFiles/client_manager_lib.dir/build
+.PHONY : client_manager_lib/fast
+
+#=============================================================================
+# Target rules for targets named client_session_lib
+
+# Build rule for target.
+client_session_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client_session_lib
+.PHONY : client_session_lib
+
+# fast build rule for target.
+client_session_lib/fast:
+	$(MAKE) $(MAKESILENT) -f client-session/CMakeFiles/client_session_lib.dir/build.make client-session/CMakeFiles/client_session_lib.dir/build
+.PHONY : client_session_lib/fast
+
 build/gen/grpc/chat.grpc.pb.o: build/gen/grpc/chat.grpc.pb.cc.o
 .PHONY : build/gen/grpc/chat.grpc.pb.o
 
@@ -212,6 +238,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client"
+	@echo "... client_manager_lib"
+	@echo "... client_session_lib"
 	@echo "... proto_gen"
 	@echo "... server"
 	@echo "... build/gen/grpc/chat.grpc.pb.o"
