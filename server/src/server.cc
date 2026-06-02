@@ -22,8 +22,9 @@ grpc::Status ServerChatService::SendUserMessage(grpc::ServerContext* context, gr
 	{
     		username = std::string(it->second.data(), it->second.size());
 	}
-	//notify new user login
+	//notify new user login and add to client manager.
 	std::cout << username << " connected." << std::endl;
+	client_manager.Add(username, stream);
 	//enter message receive loop
 	Chat::UserMessage msg;
 	while(stream->Read(&msg))

@@ -4,12 +4,14 @@
 #include <vector>
 
 #include "client-manager.h"
+#include "client-session.h"
 #include "chat.grpc.pb.h"
 
 ClientManager::ClientManager(){}
 
-void ClientManager::Add(ClientSession c)
+void ClientManager::Add(std::string username, grpc::ServerReaderWriter<Chat::UserMessage, Chat::UserMessage>* stream)
 {
+	ClientSession c = ClientSession(username, stream);
 	client_vector.push_back(c);
 }
 

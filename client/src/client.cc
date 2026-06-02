@@ -21,13 +21,26 @@ class ClientChatService
 
     stub = Chat::ChatService::NewStub(channel);
 		}
-		void ReadLoop()
+		void ReadLoop(grpc::ClientReaderWriter<Chat::UserMessage, Chat::UserMessage>* stream)
 		{
-			while(true){}
+			Chat::UserMessage msg;
+			while (stream->Read(&msg))
+			{
+				std::cout << msg.user() << ": " << msg.text() <<std::endl;	
+			}
 		}
-		void WriteLoop()
+		void WriteLoop(grpc::ClientReaderWriter<Chat::UserMessage, Chat::UserMessage>* stream)
+
 		{
-			while(true){}
+			while(true)
+			{
+				std::string str;
+				std::getline(std::cin, str);
+				Chat::UserMessage msg;
+				msg.set_text(str);
+				msg.set_user(username);
+				stream->Write(msg);
+			}
 		}
 		void Run()
 		{
@@ -37,8 +50,8 @@ class ClientChatService
 			//open bi-directional stream
 			auto stream = stub->SendUserMessage(&context);
 			//start read-write loop
-			std::thread reader(&ClientChatService::ReadLoop, this);
-			std::thread writer(&ClientChatService::WriteLoop, this);
+			std::thread reader(&ClientChatService::ReadLoop, this, stream.get());
+			std::thread writer(&ClientChatService::WriteLoop, this, stream.get());
 			reader.join();
 			writer.join();
 			//disconnect from server

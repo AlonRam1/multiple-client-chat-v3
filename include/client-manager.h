@@ -8,7 +8,7 @@ class ClientManager
 		std::vector<ClientSession> client_vector;	
 	public:
 		ClientManager();
-		void Add(ClientSession c);
+		void Add(std::string username, grpc::ServerReaderWriter<Chat::UserMessage, Chat::UserMessage>* stream);
 		void Remove(std::string username);
 		void Broadcast(Chat::UserMessage msg);
 
