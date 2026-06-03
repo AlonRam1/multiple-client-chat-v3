@@ -1,6 +1,7 @@
 #include <iostream>
 #include <memory>
 #include <thread>
+#include <mutex>
 
 #include <grpcpp/grpcpp.h>
 #include "chat.grpc.pb.h"
@@ -12,6 +13,7 @@ class ClientChatService
 	private:
 		string username;
 		std::unique_ptr<Chat::ChatService::Stub> stub;
+		std::mutex client_mutex;
 	public:	
 		ClientChatService(string username)
 		{
@@ -29,6 +31,16 @@ class ClientChatService
 				std::cout << msg.user() << ": " << msg.text() <<std::endl;	
 			}
 		}
+
+		void Write(Chat::UserMessage msg, grpc::ClientReaderWriter<Chat::UserMessage, Chat::UserMessage>* stream)
+		{
+			std::lock_guard<std::mutex> lock(client_mutex);
+			if (!stream->Write(msg)) 
+			{
+			    std::cout << "Write failed\n";
+			}
+		}
+
 		void WriteLoop(grpc::ClientReaderWriter<Chat::UserMessage, Chat::UserMessage>* stream)
 
 		{
@@ -39,7 +51,7 @@ class ClientChatService
 				Chat::UserMessage msg;
 				msg.set_text(str);
 				msg.set_user(username);
-				stream->Write(msg);
+				Write(msg, stream);
 			}
 		}
 		void Run()

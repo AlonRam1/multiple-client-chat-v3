@@ -12,6 +12,7 @@ ClientSession::ClientSession(std::string username, grpc::ServerReaderWriter<Chat
 }
 void ClientSession::WriteToClient(Chat::UserMessage msg)
 {
+	std::lock_guard<std::mutex> lock(client_mutex);
 	stream->Write(msg);	
 }
 

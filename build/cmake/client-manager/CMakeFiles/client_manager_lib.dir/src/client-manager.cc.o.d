@@ -172,7 +172,9 @@ client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o: \
  /usr/include/c++/15.2.1/bits/parse_numbers.h \
  /usr/include/c++/15.2.1/vector /usr/include/c++/15.2.1/bits/stl_vector.h \
  /usr/include/c++/15.2.1/bits/stl_bvector.h \
- /usr/include/c++/15.2.1/bits/vector.tcc \
+ /usr/include/c++/15.2.1/bits/vector.tcc /usr/include/c++/15.2.1/mutex \
+ /usr/include/c++/15.2.1/bits/std_mutex.h \
+ /usr/include/c++/15.2.1/bits/unique_lock.h \
  /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/include/client-manager.h \
  /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/include/client-session.h \
  /home/alon/Desktop/personal\ projects/multiple-client-chat-v3/build/gen/grpc/chat.grpc.pb.h \
@@ -477,8 +479,6 @@ client-manager/CMakeFiles/client_manager_lib.dir/src/client-manager.cc.o: \
  /usr/include/grpcpp/impl/create_auth_context.h \
  /usr/include/grpcpp/security/auth_context.h \
  /usr/include/grpcpp/impl/metadata_map.h /usr/include/grpcpp/impl/sync.h \
- /usr/include/c++/15.2.1/mutex /usr/include/c++/15.2.1/bits/std_mutex.h \
- /usr/include/c++/15.2.1/bits/unique_lock.h \
  /usr/include/grpcpp/support/client_interceptor.h \
  /usr/include/grpcpp/support/interceptor.h \
  /usr/include/grpcpp/completion_queue.h \

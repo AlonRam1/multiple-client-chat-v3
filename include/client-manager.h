@@ -1,11 +1,13 @@
 #pragma once
 
+#include <mutex>
 #include "client-session.h"
 
 class ClientManager
 {
 	private:
-		std::vector<ClientSession> client_vector;	
+		std::vector<std::shared_ptr<ClientSession>> client_vector;
+		std::mutex manager_mutex;
 	public:
 		ClientManager();
 		void Add(std::string username, grpc::ServerReaderWriter<Chat::UserMessage, Chat::UserMessage>* stream);
