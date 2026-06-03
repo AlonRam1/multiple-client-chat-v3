@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#kill any orphan server processes
+pkill server
+
 ./build/bin/server/server &
 
 for arg in "$@"; do
