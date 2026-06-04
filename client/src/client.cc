@@ -61,6 +61,11 @@ class ClientChatService
 			context.AddMetadata("username", username);
 			//open bi-directional stream
 			auto stream = stub->SendUserMessage(&context);
+			//display connect message
+			std::cout << "-----------------------------------------------------------" << std::endl;
+			std::cout << "CONNECTED AS USER " << username << std::endl;
+			std::cout << "-----------------------------------------------------------" << std::endl;
+
 			//start read-write loop
 			std::thread reader(&ClientChatService::ReadLoop, this, stream.get());
 			std::thread writer(&ClientChatService::WriteLoop, this, stream.get());
