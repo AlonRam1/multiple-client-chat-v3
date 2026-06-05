@@ -31,9 +31,9 @@ grpc::Status ServerChatService::SendUserMessage(grpc::ServerContext* context, gr
 	{
 		client_manager.Broadcast(msg);	
 	}
-	//disconnect message
+	//remove user from clients vector and display disconnect message
 	std::cout << username << " disconnected." << std::endl;
-
+	client_manager.Remove(username);
 	return grpc::Status::OK;
 }
 
