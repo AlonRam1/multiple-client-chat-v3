@@ -54,6 +54,14 @@ extern "C" {
 extern const ::google::protobuf::internal::DescriptorTable descriptor_table_chat_2eproto;
 }  // extern "C"
 namespace Chat {
+class UserList;
+struct UserListDefaultTypeInternal;
+extern UserListDefaultTypeInternal _UserList_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull UserList_class_data_;
+class UserListRequest;
+struct UserListRequestDefaultTypeInternal;
+extern UserListRequestDefaultTypeInternal _UserListRequest_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull UserListRequest_class_data_;
 class UserMessage;
 struct UserMessageDefaultTypeInternal;
 extern UserMessageDefaultTypeInternal _UserMessage_default_instance_;
@@ -287,6 +295,428 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserMessage final : public ::google
 };
 
 extern const ::google::protobuf::internal::ClassDataFull UserMessage_class_data_;
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserListRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:Chat.UserListRequest) */ {
+ public:
+  inline UserListRequest() : UserListRequest(nullptr) {}
+  ~UserListRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(UserListRequest* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(UserListRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr UserListRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline UserListRequest(const UserListRequest& from) : UserListRequest(nullptr, from) {}
+  inline UserListRequest(UserListRequest&& from) noexcept
+      : UserListRequest(nullptr, ::std::move(from)) {}
+  inline UserListRequest& operator=(const UserListRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline UserListRequest& operator=(UserListRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const UserListRequest& default_instance() {
+    return *reinterpret_cast<const UserListRequest*>(
+        &_UserListRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 1;
+  friend void swap(UserListRequest& a, UserListRequest& b) { a.Swap(&b); }
+  inline void Swap(UserListRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(UserListRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] UserListRequest* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<UserListRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const UserListRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const UserListRequest& from) { UserListRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(UserListRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "Chat.UserListRequest"; }
+
+  explicit UserListRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  UserListRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const UserListRequest& from);
+  UserListRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, UserListRequest&& from) noexcept
+      : UserListRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_();
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kExcludedUsersFieldNumber = 1,
+  };
+  // repeated string excluded_users = 1;
+  [[nodiscard]] int excluded_users_size()
+      const;
+  private:
+  int _internal_excluded_users_size() const;
+
+  public:
+  void clear_excluded_users() ;
+  [[nodiscard]] const ::std::string& excluded_users(int index) const;
+  ::std::string* PROTOBUF_NONNULL mutable_excluded_users(int index);
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_excluded_users(int index, Arg_&& value, Args_... args);
+  ::std::string* PROTOBUF_NONNULL add_excluded_users();
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void add_excluded_users(Arg_&& value, Args_... args);
+  [[nodiscard]] const ::google::protobuf::RepeatedPtrField<::std::string>&
+  excluded_users() const;
+  [[nodiscard]] ::google::protobuf::RepeatedPtrField<::std::string>* PROTOBUF_NONNULL
+  mutable_excluded_users();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::std::string>& _internal_excluded_users() const;
+  ::google::protobuf::RepeatedPtrField<::std::string>* PROTOBUF_NONNULL _internal_mutable_excluded_users();
+
+  public:
+  // @@protoc_insertion_point(class_scope:Chat.UserListRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<0, 1,
+                                   0, 43,
+                                   2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const UserListRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::RepeatedPtrField<::std::string> excluded_users_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_chat_2eproto;
+};
+
+extern const ::google::protobuf::internal::ClassDataFull UserListRequest_class_data_;
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UserList final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:Chat.UserList) */ {
+ public:
+  inline UserList() : UserList(nullptr) {}
+  ~UserList() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(UserList* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(UserList));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr UserList(::google::protobuf::internal::ConstantInitialized);
+
+  inline UserList(const UserList& from) : UserList(nullptr, from) {}
+  inline UserList(UserList&& from) noexcept
+      : UserList(nullptr, ::std::move(from)) {}
+  inline UserList& operator=(const UserList& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline UserList& operator=(UserList&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const UserList& default_instance() {
+    return *reinterpret_cast<const UserList*>(
+        &_UserList_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 2;
+  friend void swap(UserList& a, UserList& b) { a.Swap(&b); }
+  inline void Swap(UserList* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(UserList* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] UserList* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<UserList>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const UserList& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const UserList& from) { UserList::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(UserList* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "Chat.UserList"; }
+
+  explicit UserList(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  UserList(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const UserList& from);
+  UserList(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, UserList&& from) noexcept
+      : UserList(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_();
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUsernamesFieldNumber = 1,
+  };
+  // repeated string usernames = 1;
+  [[nodiscard]] int usernames_size()
+      const;
+  private:
+  int _internal_usernames_size() const;
+
+  public:
+  void clear_usernames() ;
+  [[nodiscard]] const ::std::string& usernames(int index) const;
+  ::std::string* PROTOBUF_NONNULL mutable_usernames(int index);
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_usernames(int index, Arg_&& value, Args_... args);
+  ::std::string* PROTOBUF_NONNULL add_usernames();
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void add_usernames(Arg_&& value, Args_... args);
+  [[nodiscard]] const ::google::protobuf::RepeatedPtrField<::std::string>&
+  usernames() const;
+  [[nodiscard]] ::google::protobuf::RepeatedPtrField<::std::string>* PROTOBUF_NONNULL
+  mutable_usernames();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::std::string>& _internal_usernames() const;
+  ::google::protobuf::RepeatedPtrField<::std::string>* PROTOBUF_NONNULL _internal_mutable_usernames();
+
+  public:
+  // @@protoc_insertion_point(class_scope:Chat.UserList)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<0, 1,
+                                   0, 31,
+                                   2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const UserList& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::RepeatedPtrField<::std::string> usernames_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_chat_2eproto;
+};
+
+extern const ::google::protobuf::internal::ClassDataFull UserList_class_data_;
 
 // ===================================================================
 
@@ -432,6 +862,158 @@ inline void UserMessage::set_allocated_text(::std::string* PROTOBUF_NULLABLE val
     _impl_.text_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:Chat.UserMessage.text)
+}
+
+// -------------------------------------------------------------------
+
+// UserListRequest
+
+// repeated string excluded_users = 1;
+inline int UserListRequest::_internal_excluded_users_size() const {
+  return _internal_excluded_users().size();
+}
+inline int UserListRequest::excluded_users_size() const {
+  return _internal_excluded_users_size();
+}
+inline void UserListRequest::clear_excluded_users() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.excluded_users_.Clear();
+  ClearHasBitForRepeated(_impl_._has_bits_[0],
+                  0x00000001U);
+}
+inline ::std::string* PROTOBUF_NONNULL UserListRequest::add_excluded_users()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::std::string* _s =
+      _internal_mutable_excluded_users()->InternalAddWithArena(
+          ::google::protobuf::MessageLite::internal_visibility(), GetArena());
+  SetHasBitForRepeated(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_add_mutable:Chat.UserListRequest.excluded_users)
+  return _s;
+}
+inline const ::std::string& UserListRequest::excluded_users(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:Chat.UserListRequest.excluded_users)
+  return _internal_excluded_users().Get(index);
+}
+inline ::std::string* PROTOBUF_NONNULL UserListRequest::mutable_excluded_users(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:Chat.UserListRequest.excluded_users)
+  return _internal_mutable_excluded_users()->Mutable(index);
+}
+template <typename Arg_, typename... Args_>
+inline void UserListRequest::set_excluded_users(int index, Arg_&& value, Args_... args) {
+  ::google::protobuf::internal::AssignToString(*_internal_mutable_excluded_users()->Mutable(index), ::std::forward<Arg_>(value),
+                        args... );
+  // @@protoc_insertion_point(field_set:Chat.UserListRequest.excluded_users)
+}
+template <typename Arg_, typename... Args_>
+inline void UserListRequest::add_excluded_users(Arg_&& value, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::google::protobuf::internal::AddToRepeatedPtrField(
+      ::google::protobuf::MessageLite::internal_visibility(), GetArena(),
+      *_internal_mutable_excluded_users(), ::std::forward<Arg_>(value),
+      args... );
+  SetHasBitForRepeated(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_add:Chat.UserListRequest.excluded_users)
+}
+inline const ::google::protobuf::RepeatedPtrField<::std::string>& UserListRequest::excluded_users()
+    const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:Chat.UserListRequest.excluded_users)
+  return _internal_excluded_users();
+}
+inline ::google::protobuf::RepeatedPtrField<::std::string>* PROTOBUF_NONNULL
+UserListRequest::mutable_excluded_users() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBitForRepeated(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_mutable_list:Chat.UserListRequest.excluded_users)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_excluded_users();
+}
+inline const ::google::protobuf::RepeatedPtrField<::std::string>&
+UserListRequest::_internal_excluded_users() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.excluded_users_;
+}
+inline ::google::protobuf::RepeatedPtrField<::std::string>* PROTOBUF_NONNULL
+UserListRequest::_internal_mutable_excluded_users() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.excluded_users_;
+}
+
+// -------------------------------------------------------------------
+
+// UserList
+
+// repeated string usernames = 1;
+inline int UserList::_internal_usernames_size() const {
+  return _internal_usernames().size();
+}
+inline int UserList::usernames_size() const {
+  return _internal_usernames_size();
+}
+inline void UserList::clear_usernames() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.usernames_.Clear();
+  ClearHasBitForRepeated(_impl_._has_bits_[0],
+                  0x00000001U);
+}
+inline ::std::string* PROTOBUF_NONNULL UserList::add_usernames()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::std::string* _s =
+      _internal_mutable_usernames()->InternalAddWithArena(
+          ::google::protobuf::MessageLite::internal_visibility(), GetArena());
+  SetHasBitForRepeated(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_add_mutable:Chat.UserList.usernames)
+  return _s;
+}
+inline const ::std::string& UserList::usernames(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:Chat.UserList.usernames)
+  return _internal_usernames().Get(index);
+}
+inline ::std::string* PROTOBUF_NONNULL UserList::mutable_usernames(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:Chat.UserList.usernames)
+  return _internal_mutable_usernames()->Mutable(index);
+}
+template <typename Arg_, typename... Args_>
+inline void UserList::set_usernames(int index, Arg_&& value, Args_... args) {
+  ::google::protobuf::internal::AssignToString(*_internal_mutable_usernames()->Mutable(index), ::std::forward<Arg_>(value),
+                        args... );
+  // @@protoc_insertion_point(field_set:Chat.UserList.usernames)
+}
+template <typename Arg_, typename... Args_>
+inline void UserList::add_usernames(Arg_&& value, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::google::protobuf::internal::AddToRepeatedPtrField(
+      ::google::protobuf::MessageLite::internal_visibility(), GetArena(),
+      *_internal_mutable_usernames(), ::std::forward<Arg_>(value),
+      args... );
+  SetHasBitForRepeated(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_add:Chat.UserList.usernames)
+}
+inline const ::google::protobuf::RepeatedPtrField<::std::string>& UserList::usernames()
+    const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:Chat.UserList.usernames)
+  return _internal_usernames();
+}
+inline ::google::protobuf::RepeatedPtrField<::std::string>* PROTOBUF_NONNULL
+UserList::mutable_usernames() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBitForRepeated(_impl_._has_bits_[0], 0x00000001U);
+  // @@protoc_insertion_point(field_mutable_list:Chat.UserList.usernames)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_usernames();
+}
+inline const ::google::protobuf::RepeatedPtrField<::std::string>&
+UserList::_internal_usernames() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.usernames_;
+}
+inline ::google::protobuf::RepeatedPtrField<::std::string>* PROTOBUF_NONNULL
+UserList::_internal_mutable_usernames() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.usernames_;
 }
 
 #ifdef __GNUC__

@@ -37,6 +37,28 @@ grpc::Status ServerChatService::SendUserMessage(grpc::ServerContext* context, gr
 	return grpc::Status::OK;
 }
 
+grpc::Status ServerChatService::SendUserList(grpc::ServerContext* context, const Chat::UserListRequest* request, Chat::UserList* response)
+{
+	bool flag = true;
+	for(auto& client_session : client_manager.GetClientVector())
+	{
+		flag = true;
+		for(auto& username : request->excluded_users())
+		{
+			if(username == client_session->GetUsername())
+			{
+				flag = false;
+				break;
+			}
+		}
+		if(flag)
+		{
+			response->add_usernames(client_session->GetUsername());
+		}
+	}
+	return grpc::Status::OK;
+}
+
 
 int main() {
 

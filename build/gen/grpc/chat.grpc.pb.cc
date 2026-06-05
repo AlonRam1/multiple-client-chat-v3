@@ -24,6 +24,7 @@ namespace Chat {
 
 static const char* ChatService_method_names[] = {
   "/Chat.ChatService/SendUserMessage",
+  "/Chat.ChatService/SendUserList",
 };
 
 std::unique_ptr< ChatService::Stub> ChatService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -34,6 +35,7 @@ std::unique_ptr< ChatService::Stub> ChatService::NewStub(const std::shared_ptr< 
 
 ChatService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
   : channel_(channel), rpcmethod_SendUserMessage_(ChatService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::BIDI_STREAMING, channel)
+  , rpcmethod_SendUserList_(ChatService_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::ClientReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* ChatService::Stub::SendUserMessageRaw(::grpc::ClientContext* context) {
@@ -52,6 +54,29 @@ void ChatService::Stub::async::SendUserMessage(::grpc::ClientContext* context, :
   return ::grpc::internal::ClientAsyncReaderWriterFactory< ::Chat::UserMessage, ::Chat::UserMessage>::Create(channel_.get(), cq, rpcmethod_SendUserMessage_, context, false, nullptr);
 }
 
+::grpc::Status ChatService::Stub::SendUserList(::grpc::ClientContext* context, const ::Chat::UserListRequest& request, ::Chat::UserList* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::Chat::UserListRequest, ::Chat::UserList, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_SendUserList_, context, request, response);
+}
+
+void ChatService::Stub::async::SendUserList(::grpc::ClientContext* context, const ::Chat::UserListRequest* request, ::Chat::UserList* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::Chat::UserListRequest, ::Chat::UserList, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SendUserList_, context, request, response, std::move(f));
+}
+
+void ChatService::Stub::async::SendUserList(::grpc::ClientContext* context, const ::Chat::UserListRequest* request, ::Chat::UserList* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_SendUserList_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::Chat::UserList>* ChatService::Stub::PrepareAsyncSendUserListRaw(::grpc::ClientContext* context, const ::Chat::UserListRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::Chat::UserList, ::Chat::UserListRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_SendUserList_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::Chat::UserList>* ChatService::Stub::AsyncSendUserListRaw(::grpc::ClientContext* context, const ::Chat::UserListRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncSendUserListRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 ChatService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       ChatService_method_names[0],
@@ -63,6 +88,16 @@ ChatService::Service::Service() {
              ::Chat::UserMessage>* stream) {
                return service->SendUserMessage(ctx, stream);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      ChatService_method_names[1],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< ChatService::Service, ::Chat::UserListRequest, ::Chat::UserList, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](ChatService::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::Chat::UserListRequest* req,
+             ::Chat::UserList* resp) {
+               return service->SendUserList(ctx, req, resp);
+             }, this)));
 }
 
 ChatService::Service::~Service() {
@@ -71,6 +106,13 @@ ChatService::Service::~Service() {
 ::grpc::Status ChatService::Service::SendUserMessage(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::Chat::UserMessage, ::Chat::UserMessage>* stream) {
   (void) context;
   (void) stream;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status ChatService::Service::SendUserList(::grpc::ServerContext* context, const ::Chat::UserListRequest* request, ::Chat::UserList* response) {
+  (void) context;
+  (void) request;
+  (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 

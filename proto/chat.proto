@@ -6,6 +6,15 @@ message UserMessage {
   string text = 2;
 }
 
+message UserListRequest{
+  repeated string excluded_users = 1;
+}
+
+message UserList{
+  repeated string usernames = 1;
+}
+
 service ChatService {
   rpc SendUserMessage (stream UserMessage) returns (stream UserMessage);
+  rpc SendUserList (UserListRequest) returns (UserList);
 }

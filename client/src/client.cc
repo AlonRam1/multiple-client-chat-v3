@@ -57,14 +57,25 @@ class ClientChatService
 		void Run()
 		{
 			//add user metadata that will be sent along with the stream
-			grpc::ClientContext context;
-			context.AddMetadata("username", username);
+			grpc::ClientContext stream_context;
+			stream_context.AddMetadata("username", username);
 			//open bi-directional stream
-			auto stream = stub->SendUserMessage(&context);
+			auto stream = stub->SendUserMessage(&stream_context);
+			//get users list to display for user
+			Chat::UserListRequest user_list_request;
+			user_list_request.add_excluded_users(username);
+			Chat::UserList user_list;
+			grpc::ClientContext list_context;
+			stub->SendUserList(&list_context, user_list_request, &user_list);
 			//display connect message
 			std::cout << "-----------------------------------------------------------" << std::endl;
 			std::cout << "CONNECTED AS USER " << username << std::endl;
-			std::cout << "-----------------------------------------------------------" << std::endl;
+			std::cout << "on chat with: ";
+			for(string user : user_list.usernames())
+			{
+				std::cout << user << " ";
+			}
+			std::cout << "\n-----------------------------------------------------------" << std::endl;
 
 			//start read-write loop
 			std::thread reader(&ClientChatService::ReadLoop, this, stream.get());

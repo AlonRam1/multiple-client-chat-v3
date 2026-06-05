@@ -30,4 +30,13 @@ void ClientManager::Broadcast(Chat::UserMessage msg)
 	}
 }
 
+std::vector<std::shared_ptr<ClientSession>> ClientManager::GetClientVector()
+{
+	return client_vector;
+}
+
+
+
+
+
 

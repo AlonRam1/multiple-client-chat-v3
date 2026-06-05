@@ -16,6 +16,8 @@ class ServerChatService final : public Chat::ChatService::Service
 		ClientManager client_manager;
 	public:	
 		grpc::Status SendUserMessage(grpc::ServerContext* context, grpc::ServerReaderWriter<Chat::UserMessage, Chat::UserMessage>* stream) override;
+		grpc::Status SendUserList(grpc::ServerContext* context, const Chat::UserListRequest* request, Chat::UserList* response) override;
 
 };
+
 
