@@ -7,4 +7,5 @@ set(CMAKE_BUILD_DIR ${CMAKE_SOURCE_DIR}/build)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BUILD_DIR}/bin/client)
 
 add_executable(client src/client.cc)
+target_include_directories(client PRIVATE ${CMAKE_SOURCE_DIR}/include)
 target_link_libraries(client PRIVATE proto_gen gRPC::grpc++)

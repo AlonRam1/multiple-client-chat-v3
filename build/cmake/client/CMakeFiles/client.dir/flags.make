@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DPROTOBUF_USE_DLLS
 
-CXX_INCLUDES = -I"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/gen/grpc" -I"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/gen/protobuf"
+CXX_INCLUDES = -I"/home/alon/Desktop/personal projects/multiple-client-chat-v3/include" -I"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/gen/grpc" -I"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/gen/protobuf"
 
 CXX_FLAGS = 
 
