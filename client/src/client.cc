@@ -15,9 +15,7 @@
 ClientChatService::ClientChatService(std::string username)
 {
 	this->username = username;
-
 	auto channel = grpc::CreateChannel("localhost:50051",grpc::InsecureChannelCredentials());
-
 	stub = Chat::ChatService::NewStub(channel);
 }
 void ClientChatService::ReadLoop(grpc::ClientReaderWriter<Chat::UserMessage, Chat::UserMessage>* stream)
@@ -43,8 +41,10 @@ void ClientChatService::WriteLoop(grpc::ClientReaderWriter<Chat::UserMessage, Ch
 {
 	while(true)
 	{
+		//read text from user.
 		std::string str;
 		std::getline(std::cin, str);
+		//construct a user message object from given text and write to the user.
 		Chat::UserMessage msg;
 		msg.set_text(str);
 		msg.set_user(username);

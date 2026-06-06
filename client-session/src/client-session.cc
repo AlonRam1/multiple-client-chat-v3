@@ -16,7 +16,10 @@ void ClientSession::WriteToClient(Chat::UserMessage msg)
 	stream->Write(msg);	
 }
 
-std::string ClientSession::GetUsername(){return this->username;}
+std::string ClientSession::GetUsername()
+{
+	return this->username;
+}
 
 void ClientSession::SetUsername(std::string username)
 {

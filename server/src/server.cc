@@ -39,6 +39,7 @@ grpc::Status ServerChatService::SendUserMessage(grpc::ServerContext* context, gr
 
 grpc::Status ServerChatService::SendUserList(grpc::ServerContext* context, const Chat::UserListRequest* request, Chat::UserList* response)
 {
+	//flag records whether, in scanning the excluded users list, we stumble upon the user we are trying to add to the users list. 
 	bool flag = true;
 	for(auto& client_session : client_manager.GetClientVector())
 	{
@@ -51,6 +52,7 @@ grpc::Status ServerChatService::SendUserList(grpc::ServerContext* context, const
 				break;
 			}
 		}
+		//if the current user is not in the given excluded users list, add it to the users list.
 		if(flag)
 		{
 			response->add_usernames(client_session->GetUsername());
