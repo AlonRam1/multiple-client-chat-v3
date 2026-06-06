@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/cmake_install.cmake",
+		"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/server/cmake_install.cmake",
+		"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/client/cmake_install.cmake",
+		"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/client-manager/cmake_install.cmake",
+		"/home/alon/Desktop/personal projects/multiple-client-chat-v3/build/cmake/client-session/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

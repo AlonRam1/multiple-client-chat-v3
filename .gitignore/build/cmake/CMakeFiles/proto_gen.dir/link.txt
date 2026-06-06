@@ -1,0 +1,2 @@
+/usr/bin/ar qc libproto_gen.a CMakeFiles/proto_gen.dir/build/gen/protobuf/chat.pb.cc.o CMakeFiles/proto_gen.dir/build/gen/grpc/chat.grpc.pb.cc.o
+/usr/bin/ranlib libproto_gen.a
