@@ -1,2 +1,0 @@
-/usr/bin/ar qc libclient_session_lib.a "CMakeFiles/client_session_lib.dir/src/client-session.cc.o"
-/usr/bin/ranlib libclient_session_lib.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libchat_core.a CMakeFiles/chat_core.dir/server/src/server.cc.o CMakeFiles/chat_core.dir/client/src/client.cc.o "CMakeFiles/chat_core.dir/client-manager/src/client-manager.cc.o"
-/usr/bin/ranlib libchat_core.a

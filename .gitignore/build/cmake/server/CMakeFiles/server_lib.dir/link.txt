@@ -1,2 +1,0 @@
-/usr/bin/ar qc libserver_lib.a "CMakeFiles/server_lib.dir/__/client-manager/src/client-manager.cc.o"
-/usr/bin/ranlib libserver_lib.a
